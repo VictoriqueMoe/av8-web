@@ -1,7 +1,9 @@
 fetch('http://localhost:4444/api/bot/info')
-  .then((response) => {
-    console.log(response);
-  })
-  .catch((error) => {
-    console.error(error);
-  })
+    .then((response) => {
+        return response.json();
+    }).then((json) => {
+        console.log(json);
+    })
+    .catch((error) => {
+        console.error(error);
+    })
